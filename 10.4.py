@@ -35,7 +35,7 @@ class Cafe:
                     break
             else:
                 self.queue.put(guest)
-                print(f"{guest.name}")
+                print(f"{guest.name} в очереди")
 
     def discuss_guests(self):  # обслуживание гостей
         while not self.queue.empty() or any(table.guest is not None for table in self.tables):
